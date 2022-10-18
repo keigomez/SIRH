@@ -118,7 +118,8 @@
                         <div class="form-group row">
                             @Html.LabelFor(model => model.Caucion.CopiaCertificada, new { @for = "CopiaCertificada", @class = "col-sm-2 col-form-label" })
                             <div class="col-sm-10">
-                                @Html.CheckBoxFor(model => model.Caucion.CopiaCertificada, new {
+                                @Html.CheckBoxFor(model => model.Caucion.CopiaCertificada, new
+                                {
                                        @id = "CopiaCertificada",
                                        @type = "checkbox",
                                        @data_toggle = "toggle",
@@ -176,17 +177,17 @@
 
                 @if (!Html.ViewData.ModelState.IsValid)
                 {
-                <div class="card border-danger">
-                    <div class="card-header"><strong>El formulario contiene los siguientes errores:</strong></div>
-                    <div class="card-body text-danger">
-                        @foreach (var modelError in Html.ViewData.ModelState.SelectMany(keyValuePair => keyValuePair.Value.Errors))
-                        {
-                            <div class="alert alert-danger" role="alert">
-                                <h5>@modelError.ErrorMessage</h5>
-                            </div>
-                        }
+                    <div class="card border-danger">
+                        <div class="card-header"><strong>El formulario contiene los siguientes errores:</strong></div>
+                        <div class="card-body text-danger">
+                            @foreach (var modelError in Html.ViewData.ModelState.SelectMany(keyValuePair => keyValuePair.Value.Errors))
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    <h5>@modelError.ErrorMessage</h5>
+                                </div>
+                            }
+                        </div>
                     </div>
-                </div>
                 }
             </div>
         }
@@ -198,16 +199,16 @@
     $(function () {
         $('#datepickerEmision').val('');
         $('#datepickerEmision').datepicker(
-        {
-            language: "es",
-            autoclose: true
-        });
+            {
+                language: "es",
+                autoclose: true
+            });
 
         $('#datepickerVence').val('');
         $('#datepickerVence').datepicker(
-        {
-            language: "es",
-            autoclose: true
-        });
+            {
+                language: "es",
+                autoclose: true
+            });
     });
 </script>

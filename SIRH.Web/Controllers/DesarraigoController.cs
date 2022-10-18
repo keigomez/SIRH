@@ -7,18 +7,21 @@ using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using SIRH.DTO;
-//using SIRH.Web.DesarraigoLocal;
-using SIRH.Web.DesarraigoService;
-using SIRH.Web.FuncionarioService;
-//using SIRH.Web.AccionPersonalLocal;
-using SIRH.Web.AccionPersonalService;
+using SIRH.Web.DesarraigoLocal;
+//using SIRH.Web.DesarraigoService;
+using SIRH.Web.FuncionarioLocal;
+//using SIRH.Web.FuncionarioService;
+using SIRH.Web.AccionPersonalLocal;
+//using SIRH.Web.AccionPersonalService;
 using SIRH.Web.Helpers;
-using SIRH.Web.PerfilUsuarioService;
+using SIRH.Web.PerfilUsuarioLocal;
+//using SIRH.Web.PerfilUsuarioService;
 using SIRH.Web.Reports.Desarraigos;
 using SIRH.Web.Reports.PDF;
 using SIRH.Web.ViewModels;
 using SIRH.Web.UserValidation;
-using SIRH.Web.PuestoService;
+using SIRH.Web.PuestoLocal;
+//using SIRH.Web.PuestoService;
 
 namespace SIRH.Web.Controllers
 {

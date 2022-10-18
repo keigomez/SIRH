@@ -1443,7 +1443,10 @@ advertencia 6013: La tabla o vista 'SIRH.dbo._VACANTES_AB' no tiene definida una
     <Property Name="AnioPresupuesto" Type="varchar" MaxLength="5" Nullable="false" />
     <Property Name="MtoComponentePresupuestario" Type="decimal" Precision="20" Scale="2" />
     <Property Name="FK_CatMovimientoPresupuesto" Type="int" />
-    <Property Name="Detalle" Type="varchar" MaxLength="250" />
+    <Property Name="ObsComponentePresupuestario" Type="varchar" MaxLength="250" />
+    <Property Name="TituloComponentePresupuestario" Type="varchar" MaxLength="50" />
+    <Property Name="NumComponentePresupuestario" Type="varchar" MaxLength="50" />
+    <Property Name="FecComponentePresupuestario" Type="datetime" />
   </EntityType>
   <EntityType Name="ComponenteSalarial">
     <Key>
@@ -1553,10 +1556,8 @@ advertencia 6002: La tabla o vista 'SIRH.dbo.DecretoComponentePresupuestario' no
   <EntityType Name="DecretoComponentePresupuestario">
     <Key>
       <PropertyRef Name="FK_Decreto" />
-      <PropertyRef Name="FK_ComponentePresupuestario" />
     </Key>
     <Property Name="FK_Decreto" Type="int" Nullable="false" />
-    <Property Name="FK_ComponentePresupuestario" Type="int" Nullable="false" />
     <Property Name="TipCambio" Type="int" />
   </EntityType>
   <EntityType Name="DeduccionEfectuada">
@@ -2688,7 +2689,6 @@ advertencia 6002: La tabla o vista 'SIRH.dbo.Mes' no tiene definida ninguna clav
       <PropertyRef Name="PK_ObjetoGasto" />
     </Key>
     <Property Name="PK_ObjetoGasto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FK_Partida" Type="int" />
     <Property Name="FK_SubPartida" Type="int" />
     <Property Name="CodObjetoGasto" Type="varchar" MaxLength="7" />
     <Property Name="DesObjetoGasto" Type="varchar" MaxLength="250" />
@@ -4702,21 +4702,9 @@ advertencia 6013: La tabla o vista 'SIRH.dbo.Rubros' no tiene definida una clave
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_DecretoComponentePresupuestario_ComponentePresupuestario">
-    <End Role="ComponentePresupuestario" Type="Self.ComponentePresupuestario" Multiplicity="1" />
-    <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ComponentePresupuestario">
-        <PropertyRef Name="PK_ComponentePresupuestario" />
-      </Principal>
-      <Dependent Role="DecretoComponentePresupuestario">
-        <PropertyRef Name="FK_ComponentePresupuestario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_DecretoComponentePresupuestario_Decreto">
     <End Role="Decreto" Type="Self.Decreto" Multiplicity="1" />
-    <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="*" />
+    <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Decreto">
         <PropertyRef Name="PK_Decreto" />
@@ -6166,18 +6154,6 @@ advertencia 6013: La tabla o vista 'SIRH.dbo.Rubros' no tiene definida una clave
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ObjetoGasto_Partida">
-    <End Role="Partida" Type="Self.Partida" Multiplicity="0..1" />
-    <End Role="ObjetoGasto" Type="Self.ObjetoGasto" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Partida">
-        <PropertyRef Name="PK_Partida" />
-      </Principal>
-      <Dependent Role="ObjetoGasto">
-        <PropertyRef Name="FK_Partida" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ObjetoGasto_SubPartida">
     <End Role="SubPartida" Type="Self.SubPartida" Multiplicity="0..1" />
     <End Role="ObjetoGasto" Type="Self.ObjetoGasto" Multiplicity="*" />
@@ -7558,7 +7534,6 @@ FROM [dbo].[_RespaldoNombramiento20210303] AS [_RespaldoNombramiento20210303]</D
     <EntitySet Name="DecretoComponentePresupuestario" EntityType="Self.DecretoComponentePresupuestario" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
 [DecretoComponentePresupuestario].[FK_Decreto] AS [FK_Decreto], 
-[DecretoComponentePresupuestario].[FK_ComponentePresupuestario] AS [FK_ComponentePresupuestario], 
 [DecretoComponentePresupuestario].[TipCambio] AS [TipCambio]
 FROM [dbo].[DecretoComponentePresupuestario] AS [DecretoComponentePresupuestario]</DefiningQuery>
     </EntitySet>
@@ -8025,10 +8000,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
     <AssociationSet Name="FK_dbo_UbicacionAsueto_3" Association="Self.FK_dbo_UbicacionAsueto_3">
       <End Role="Canton" EntitySet="Canton" />
       <End Role="UbicacionAsueto" EntitySet="UbicacionAsueto" />
-    </AssociationSet>
-    <AssociationSet Name="FK_DecretoComponentePresupuestario_ComponentePresupuestario" Association="Self.FK_DecretoComponentePresupuestario_ComponentePresupuestario">
-      <End Role="ComponentePresupuestario" EntitySet="ComponentePresupuestario" />
-      <End Role="DecretoComponentePresupuestario" EntitySet="DecretoComponentePresupuestario" />
     </AssociationSet>
     <AssociationSet Name="FK_DecretoComponentePresupuestario_Decreto" Association="Self.FK_DecretoComponentePresupuestario_Decreto">
       <End Role="Decreto" EntitySet="Decreto" />
@@ -8513,10 +8484,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
     <AssociationSet Name="FK_ObjetivoInstitucional_PeriodoCalificacion" Association="Self.FK_ObjetivoInstitucional_PeriodoCalificacion">
       <End Role="PeriodoCalificacion" EntitySet="PeriodoCalificacion" />
       <End Role="ObjetivoInstitucional" EntitySet="ObjetivoInstitucional" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ObjetoGasto_Partida" Association="Self.FK_ObjetoGasto_Partida">
-      <End Role="Partida" EntitySet="Partida" />
-      <End Role="ObjetoGasto" EntitySet="ObjetoGasto" />
     </AssociationSet>
     <AssociationSet Name="FK_ObjetoGasto_SubPartida" Association="Self.FK_ObjetoGasto_SubPartida">
       <End Role="SubPartida" EntitySet="SubPartida" />

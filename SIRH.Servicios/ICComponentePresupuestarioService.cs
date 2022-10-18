@@ -18,6 +18,10 @@ namespace SIRH.Servicios
                                                    CCatMovimientoPresupuestoDTO tipo, CComponentePresupuestarioDTO componente);
 
         [OperationContract]
+        CBaseDTO AgregarDecretoComponentePresupuestario(CProgramaDTO programa, CObjetoGastoDTO objetoGasto,
+                                                    CCatMovimientoPresupuestoDTO tipo, CComponentePresupuestarioDTO componente);
+
+        [OperationContract]
         CBaseDTO EditarComponentePresupuestario(CComponentePresupuestarioDTO componente);
 
 

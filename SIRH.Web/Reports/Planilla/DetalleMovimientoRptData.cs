@@ -29,7 +29,7 @@ namespace SIRH.Web.Reports.Planilla
             {
                 Anio = dato.ComponentePresupuestario.AnioPresupuesto,
                 Programa = dato.ComponentePresupuestario.Programa.IdEntidad.ToString() + "-" + dato.ComponentePresupuestario.Programa.DesPrograma,
-                ObjetoGasto = dato.ComponentePresupuestario.ObjetoGasto.Partida.CodPartida + " " +
+                ObjetoGasto = dato.ComponentePresupuestario.ObjetoGasto.SubPartida.Partida.CodPartida + " " +
                                 dato.ComponentePresupuestario.ObjetoGasto.SubPartida.CodSubPartida + " " +
                                 dato.ComponentePresupuestario.ObjetoGasto.CodObjGasto + "-" +
                                 dato.ComponentePresupuestario.ObjetoGasto.DesObjGasto,

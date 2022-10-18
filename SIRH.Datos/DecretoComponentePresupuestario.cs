@@ -15,10 +15,8 @@ namespace SIRH.Datos
     public partial class DecretoComponentePresupuestario
     {
         public int FK_Decreto { get; set; }
-        public int FK_ComponentePresupuestario { get; set; }
         public Nullable<int> TipCambio { get; set; }
     
-        public virtual ComponentePresupuestario ComponentePresupuestario { get; set; }
         public virtual Decreto Decreto { get; set; }
     }
 }

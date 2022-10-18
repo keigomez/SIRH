@@ -14,22 +14,19 @@ namespace SIRH.Datos
     
     public partial class ComponentePresupuestario
     {
-        public ComponentePresupuestario()
-        {
-            this.DecretoComponentePresupuestario = new HashSet<DecretoComponentePresupuestario>();
-        }
-    
         public int PK_ComponentePresupuestario { get; set; }
         public int FK_ObjetoGasto { get; set; }
         public int FK_Programa { get; set; }
         public string AnioPresupuesto { get; set; }
         public Nullable<decimal> MtoComponentePresupuestario { get; set; }
         public Nullable<int> FK_CatMovimientoPresupuesto { get; set; }
-        public string Detalle { get; set; }
+        public string TituloComponentePresupuestario { get; set; }
+        public string NumComponentePresupuestario { get; set; }
+        public Nullable<System.DateTime> FecComponentePresupuestario { get; set; }
+        public string ObsComponentePresupuestario { get; set; }
     
         public virtual CatMovimientoPresupuesto CatMovimientoPresupuesto { get; set; }
         public virtual ObjetoGasto ObjetoGasto { get; set; }
         public virtual Programa Programa { get; set; }
-        public virtual ICollection<DecretoComponentePresupuestario> DecretoComponentePresupuestario { get; set; }
     }
 }

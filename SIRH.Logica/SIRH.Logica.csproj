@@ -105,6 +105,7 @@
     <Compile Include="CCatMetaPrioridadL.cs" />
     <Compile Include="CComponentePresupuestarioL.cs" />
     <Compile Include="CCursoL.cs" />
+    <Compile Include="CDecretoL.cs" />
     <Compile Include="CDeduccionTemporalL.cs" />
     <Compile Include="CDetalleAsignacionGastoTransporteModificadaL.cs" />
     <Compile Include="CDetalleCalificacionSeguimientoL.cs" />

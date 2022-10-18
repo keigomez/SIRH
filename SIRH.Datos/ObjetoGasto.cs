@@ -21,14 +21,12 @@ namespace SIRH.Datos
         }
     
         public int PK_ObjetoGasto { get; set; }
-        public Nullable<int> FK_Partida { get; set; }
         public Nullable<int> FK_SubPartida { get; set; }
         public string CodObjetoGasto { get; set; }
         public string DesObjetoGasto { get; set; }
     
         public virtual ICollection<ComponentePresupuestario> ComponentePresupuestario { get; set; }
         public virtual ICollection<ComponenteSalarial> ComponenteSalarial { get; set; }
-        public virtual Partida Partida { get; set; }
         public virtual SubPartida SubPartida { get; set; }
     }
 }

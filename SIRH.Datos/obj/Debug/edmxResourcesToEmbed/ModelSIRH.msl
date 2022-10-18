@@ -854,13 +854,16 @@
     <EntitySetMapping Name="ComponentePresupuestario">
       <EntityTypeMapping TypeName="SIRHModel.ComponentePresupuestario">
         <MappingFragment StoreEntitySet="ComponentePresupuestario">
+          <ScalarProperty Name="ObsComponentePresupuestario" ColumnName="ObsComponentePresupuestario" />
           <ScalarProperty Name="PK_ComponentePresupuestario" ColumnName="PK_ComponentePresupuestario" />
           <ScalarProperty Name="FK_ObjetoGasto" ColumnName="FK_ObjetoGasto" />
           <ScalarProperty Name="FK_Programa" ColumnName="FK_Programa" />
           <ScalarProperty Name="AnioPresupuesto" ColumnName="AnioPresupuesto" />
           <ScalarProperty Name="MtoComponentePresupuestario" ColumnName="MtoComponentePresupuestario" />
           <ScalarProperty Name="FK_CatMovimientoPresupuesto" ColumnName="FK_CatMovimientoPresupuesto" />
-          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="TituloComponentePresupuestario" ColumnName="TituloComponentePresupuestario" />
+          <ScalarProperty Name="NumComponentePresupuestario" ColumnName="NumComponentePresupuestario" />
+          <ScalarProperty Name="FecComponentePresupuestario" ColumnName="FecComponentePresupuestario" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -2170,7 +2173,6 @@
       <EntityTypeMapping TypeName="SIRHModel.ObjetoGasto">
         <MappingFragment StoreEntitySet="ObjetoGasto">
           <ScalarProperty Name="PK_ObjetoGasto" ColumnName="PK_ObjetoGasto" />
-          <ScalarProperty Name="FK_Partida" ColumnName="FK_Partida" />
           <ScalarProperty Name="FK_SubPartida" ColumnName="FK_SubPartida" />
           <ScalarProperty Name="CodObjetoGasto" ColumnName="CodObjetoGasto" />
           <ScalarProperty Name="DesObjetoGasto" ColumnName="DesObjetoGasto" />
@@ -3341,7 +3343,6 @@
       <EntityTypeMapping TypeName="SIRHModel.DecretoComponentePresupuestario">
         <MappingFragment StoreEntitySet="DecretoComponentePresupuestario">
           <ScalarProperty Name="FK_Decreto" ColumnName="FK_Decreto" />
-          <ScalarProperty Name="FK_ComponentePresupuestario" ColumnName="FK_ComponentePresupuestario" />
           <ScalarProperty Name="TipCambio" ColumnName="TipCambio" />
         </MappingFragment>
       </EntityTypeMapping>

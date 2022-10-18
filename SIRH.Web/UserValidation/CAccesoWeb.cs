@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using SIRH.Web.Helpers;
-using SIRH.Web.PerfilUsuarioService;
+//using SIRH.Web.PerfilUsuarioService;
+using SIRH.Web.PerfilUsuarioLocal;
 using SIRH.DTO;
 
 namespace SIRH.Web.UserValidation

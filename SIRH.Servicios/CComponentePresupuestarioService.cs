@@ -19,6 +19,14 @@ namespace SIRH.Servicios
             return respuesta.GuardarComponentePresupuestario(programa, objetoGasto, tipo, componente);
         }
 
+        public CBaseDTO AgregarDecretoComponentePresupuestario(CProgramaDTO programa, CObjetoGastoDTO objetoGasto,
+                                                   CCatMovimientoPresupuestoDTO tipo, CComponentePresupuestarioDTO componente)
+        {
+            CComponentePresupuestarioL respuesta = new CComponentePresupuestarioL();
+            return respuesta.AgregarDecretoComponentePresupuestario(programa, objetoGasto, tipo, componente);
+
+        }
+
         public CBaseDTO EditarComponentePresupuestario(CComponentePresupuestarioDTO componente)
         {
             CComponentePresupuestarioL respuesta = new CComponentePresupuestarioL();

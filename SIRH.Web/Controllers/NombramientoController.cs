@@ -10,8 +10,8 @@ using SIRH.Web.PuestoLocal;
 using SIRH.DTO;
 using SIRH.Web.ViewModels;
 using SIRH.Web.Helpers;
-//using SIRH.Web.AccionPersonalLocal;
-using SIRH.Web.AccionPersonalService;
+using SIRH.Web.AccionPersonalLocal;
+//using SIRH.Web.AccionPersonalService;
 using SIRH.Web.UserValidation;
 using System.Security.Principal;
 

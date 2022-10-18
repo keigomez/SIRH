@@ -9,8 +9,8 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
-using SIRH.Web.PerfilUsuarioService;
-//using SIRH.Web.PerfilUsuarioLocal;
+//using SIRH.Web.PerfilUsuarioService;
+using SIRH.Web.PerfilUsuarioLocal;
 using SIRH.DTO;
 
 namespace SIRH.Web.Helpers

@@ -99,6 +99,7 @@
     <Compile Include="CCompetenciaTransversalCargoDTO.cs" />
     <Compile Include="CComponenteSalarialDTO.cs" />
     <Compile Include="CCursoDTO.cs" />
+    <Compile Include="CDecretoDTO.cs" />
     <Compile Include="CDeduccionTemporalDTO.cs" />
     <Compile Include="CDetalleAsignacionGastoTransporteModificadaDTO.cs" />
     <Compile Include="CDetalleCalificacionSeguimientoDTO.cs" />

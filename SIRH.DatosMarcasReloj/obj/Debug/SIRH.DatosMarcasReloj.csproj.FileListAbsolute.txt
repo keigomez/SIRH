@@ -29,3 +29,71 @@ C:\Users\ramir\Desktop\Inge II\Proyecto 28\SIRH_6_7_2022\SIRH.DatosMarcasReloj\o
 C:\Users\ramir\Desktop\Inge II\Proyecto 28\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.CopyComplete
 C:\Users\ramir\Desktop\Inge II\Proyecto 28\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.dll
 C:\Users\ramir\Desktop\Inge II\Proyecto 28\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.pdb
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.dll.config
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.dll
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.pdb
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\EntityFramework.dll
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.dll
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DTO.dll
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.pdb
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.dll.config
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DTO.pdb
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\EntityFramework.xml
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.AssemblyReference.cache
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.Properties.Resources.resources
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.GenerateResource.cache
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.CoreCompileInputs.cache
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.CopyComplete
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.dll
+C:\Users\ramir\Desktop\Inge II\Copia\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.dll.config
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.dll
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\EntityFramework.dll
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.dll
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DTO.dll
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.dll.config
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DTO.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\EntityFramework.xml
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.AssemblyReference.cache
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.Properties.Resources.resources
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.GenerateResource.cache
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.CoreCompileInputs.cache
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.CopyComplete
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.dll
+C:\Users\ramir\Desktop\Inge II\Copia 4\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.dll.config
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.dll
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\EntityFramework.dll
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.dll
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DTO.dll
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.dll.config
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DTO.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\EntityFramework.xml
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.AssemblyReference.cache
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.Properties.Resources.resources
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.GenerateResource.cache
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.CoreCompileInputs.cache
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.CopyComplete
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.dll
+C:\Users\ramir\Desktop\Inge II\Copia 6\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.dll.config
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.dll
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DatosMarcasReloj.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\EntityFramework.dll
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.dll
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DTO.dll
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.Datos.dll.config
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\SIRH.DTO.pdb
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\bin\Debug\EntityFramework.xml
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.AssemblyReference.cache
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.Properties.Resources.resources
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.GenerateResource.cache
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.CoreCompileInputs.cache
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.csproj.CopyComplete
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.dll
+C:\Users\ramir\Desktop\Inge II\Copia 7\SIRH_6_7_2022\SIRH.DatosMarcasReloj\obj\Debug\SIRH.DatosMarcasReloj.pdb

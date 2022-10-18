@@ -891,11 +891,13 @@
     <Property Name="AnioPresupuesto" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="MtoComponentePresupuestario" Type="Decimal" Precision="20" Scale="2" />
     <Property Name="FK_CatMovimientoPresupuesto" Type="Int32" />
-    <Property Name="Detalle" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TituloComponentePresupuestario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NumComponentePresupuestario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FecComponentePresupuestario" Type="DateTime" Precision="3" />
     <NavigationProperty Name="CatMovimientoPresupuesto" Relationship="Self.FK_ComponentePresupuestario_CatMovimientoPresupuesto" FromRole="ComponentePresupuestario" ToRole="CatMovimientoPresupuesto" />
     <NavigationProperty Name="ObjetoGasto" Relationship="Self.FK_ComponentePresupuestario_ObjetoGasto" FromRole="ComponentePresupuestario" ToRole="ObjetoGasto" />
     <NavigationProperty Name="Programa" Relationship="Self.FK_ComponentePresupuestario_Programa" FromRole="ComponentePresupuestario" ToRole="Programa" />
-    <NavigationProperty Name="DecretoComponentePresupuestario" Relationship="Self.FK_DecretoComponentePresupuestario_ComponentePresupuestario" FromRole="ComponentePresupuestario" ToRole="DecretoComponentePresupuestario" />
+    <Property Name="ObsComponentePresupuestario" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="ComponenteSalarial">
     <Key>
@@ -2388,13 +2390,11 @@
       <PropertyRef Name="PK_ObjetoGasto" />
     </Key>
     <Property Name="PK_ObjetoGasto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="FK_Partida" Type="Int32" />
     <Property Name="FK_SubPartida" Type="Int32" />
     <Property Name="CodObjetoGasto" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
     <Property Name="DesObjetoGasto" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="ComponentePresupuestario" Relationship="Self.FK_ComponentePresupuestario_ObjetoGasto" FromRole="ObjetoGasto" ToRole="ComponentePresupuestario" />
     <NavigationProperty Name="ComponenteSalarial" Relationship="Self.FK_ComponenteSalarial_ObjetoGasto" FromRole="ObjetoGasto" ToRole="ComponenteSalarial" />
-    <NavigationProperty Name="Partida" Relationship="Self.FK_ObjetoGasto_Partida" FromRole="ObjetoGasto" ToRole="Partida" />
     <NavigationProperty Name="SubPartida" Relationship="Self.FK_ObjetoGasto_SubPartida" FromRole="ObjetoGasto" ToRole="SubPartida" />
   </EntityType>
   <EntityType Name="OcupacionReal">
@@ -2548,7 +2548,6 @@
     <Property Name="PK_Partida" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CodPartida" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
     <Property Name="DesPartida" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="ObjetoGasto" Relationship="Self.FK_ObjetoGasto_Partida" FromRole="Partida" ToRole="ObjetoGasto" />
     <NavigationProperty Name="SubPartida" Relationship="Self.FK_SubPartida_Partida" FromRole="Partida" ToRole="SubPartida" />
   </EntityType>
   <EntityType Name="PedimentoPuesto">
@@ -3676,12 +3675,9 @@
   <EntityType Name="DecretoComponentePresupuestario">
     <Key>
       <PropertyRef Name="FK_Decreto" />
-      <PropertyRef Name="FK_ComponentePresupuestario" />
     </Key>
     <Property Name="FK_Decreto" Type="Int32" Nullable="false" />
-    <Property Name="FK_ComponentePresupuestario" Type="Int32" Nullable="false" />
     <Property Name="TipCambio" Type="Int32" />
-    <NavigationProperty Name="ComponentePresupuestario" Relationship="Self.FK_DecretoComponentePresupuestario_ComponentePresupuestario" FromRole="DecretoComponentePresupuestario" ToRole="ComponentePresupuestario" />
     <NavigationProperty Name="Decreto" Relationship="Self.FK_DecretoComponentePresupuestario_Decreto" FromRole="DecretoComponentePresupuestario" ToRole="Decreto" />
   </EntityType>
   <EntityType Name="ListaNombramientosActivos">
@@ -4673,18 +4669,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_DecretoComponentePresupuestario_ComponentePresupuestario">
-    <End Role="ComponentePresupuestario" Type="Self.ComponentePresupuestario" Multiplicity="1" />
-    <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ComponentePresupuestario">
-        <PropertyRef Name="PK_ComponentePresupuestario" />
-      </Principal>
-      <Dependent Role="DecretoComponentePresupuestario">
-        <PropertyRef Name="FK_ComponentePresupuestario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ComponenteSalarial_ObjetoGasto">
     <End Role="ObjetoGasto" Type="Self.ObjetoGasto" Multiplicity="0..1" />
     <End Role="ComponenteSalarial" Type="Self.ComponenteSalarial" Multiplicity="*" />
@@ -4867,7 +4851,7 @@
   </Association>
   <Association Name="FK_DecretoComponentePresupuestario_Decreto">
     <End Role="Decreto" Type="Self.Decreto" Multiplicity="1" />
-    <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="*" />
+    <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Decreto">
         <PropertyRef Name="PK_Decreto" />
@@ -6749,18 +6733,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ObjetoGasto_Partida">
-    <End Role="Partida" Type="Self.Partida" Multiplicity="0..1" />
-    <End Role="ObjetoGasto" Type="Self.ObjetoGasto" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Partida">
-        <PropertyRef Name="PK_Partida" />
-      </Principal>
-      <Dependent Role="ObjetoGasto">
-        <PropertyRef Name="FK_Partida" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ObjetoGasto_SubPartida">
     <End Role="SubPartida" Type="Self.SubPartida" Multiplicity="0..1" />
     <End Role="ObjetoGasto" Type="Self.ObjetoGasto" Multiplicity="*" />
@@ -7704,10 +7676,6 @@
       <End Role="Programa" EntitySet="Programa" />
       <End Role="ComponentePresupuestario" EntitySet="ComponentePresupuestario" />
     </AssociationSet>
-    <AssociationSet Name="FK_DecretoComponentePresupuestario_ComponentePresupuestario" Association="Self.FK_DecretoComponentePresupuestario_ComponentePresupuestario">
-      <End Role="ComponentePresupuestario" EntitySet="ComponentePresupuestario" />
-      <End Role="DecretoComponentePresupuestario" EntitySet="DecretoComponentePresupuestario" />
-    </AssociationSet>
     <AssociationSet Name="FK_ComponenteSalarial_ObjetoGasto" Association="Self.FK_ComponenteSalarial_ObjetoGasto">
       <End Role="ObjetoGasto" EntitySet="ObjetoGasto" />
       <End Role="ComponenteSalarial" EntitySet="ComponenteSalarial" />
@@ -8395,10 +8363,6 @@
     <AssociationSet Name="FK_ObjetivoInstitucional_PeriodoCalificacion" Association="Self.FK_ObjetivoInstitucional_PeriodoCalificacion">
       <End Role="PeriodoCalificacion" EntitySet="PeriodoCalificacion" />
       <End Role="ObjetivoInstitucional" EntitySet="ObjetivoInstitucional" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ObjetoGasto_Partida" Association="Self.FK_ObjetoGasto_Partida">
-      <End Role="Partida" EntitySet="Partida" />
-      <End Role="ObjetoGasto" EntitySet="ObjetoGasto" />
     </AssociationSet>
     <AssociationSet Name="FK_ObjetoGasto_SubPartida" Association="Self.FK_ObjetoGasto_SubPartida">
       <End Role="SubPartida" EntitySet="SubPartida" />

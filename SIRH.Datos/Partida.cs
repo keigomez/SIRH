@@ -16,7 +16,6 @@ namespace SIRH.Datos
     {
         public Partida()
         {
-            this.ObjetoGasto = new HashSet<ObjetoGasto>();
             this.SubPartida = new HashSet<SubPartida>();
         }
     
@@ -24,7 +23,6 @@ namespace SIRH.Datos
         public string CodPartida { get; set; }
         public string DesPartida { get; set; }
     
-        public virtual ICollection<ObjetoGasto> ObjetoGasto { get; set; }
         public virtual ICollection<SubPartida> SubPartida { get; set; }
     }
 }

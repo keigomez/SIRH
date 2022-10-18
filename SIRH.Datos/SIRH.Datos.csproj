@@ -242,6 +242,7 @@
     <Compile Include="CCursoCapacitacionD.cs" />
     <Compile Include="CCursoD.cs" />
     <Compile Include="CCursoGradoD.cs" />
+    <Compile Include="CDecretoD.cs" />
     <Compile Include="CDeduccionEfectuadaD.cs" />
     <Compile Include="CDeduccionTemporalD.cs" />
     <Compile Include="CDepartamentoD.cs" />

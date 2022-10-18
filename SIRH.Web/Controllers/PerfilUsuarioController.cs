@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using SIRH.Web.PerfilUsuarioService;
-//using SIRH.Web.PerfilUsuarioLocal;
+//using SIRH.Web.PerfilUsuarioService;
+using SIRH.Web.PerfilUsuarioLocal;
 using SIRH.Web.ViewModels;
 using SIRH.DTO;
 using SIRH.Web.Helpers;
 using System.Security.Principal;
 using SIRH.Web.UserValidation;
-using SIRH.Web.FuncionarioService;
+//using SIRH.Web.FuncionarioService;
+using SIRH.Web.FuncionarioLocal;
 
 namespace SIRH.Web.Controllers
 {

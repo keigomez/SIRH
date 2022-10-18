@@ -284,6 +284,8 @@ namespace SIRH.DTO
     [KnownType(typeof(CDetallePuntosDTO))]
     [KnownType(typeof(CPuntosDTO))]
 
+    [KnownType(typeof(CDecretoDTO))]
+
     public class CBaseDTO
     {
         [DataMember]

@@ -37,7 +37,8 @@ namespace SIRH.Web.Helpers
         Planificacion = 22,
         RelacionesLaborales = 23,
         Consultorio = 24,
-        SeleccionPersonal = 25
+        SeleccionPersonal = 25,
+        ComponentePresupuestario = 26
     }
 
     public enum ENivelesVacantes

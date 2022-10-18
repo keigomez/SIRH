@@ -31,6 +31,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -230,6 +231,7 @@
     <Compile Include="Controllers\BorradorAccionPersonalController.cs" />
     <Compile Include="Controllers\CarreraController.cs" />
     <Compile Include="Controllers\CaucionController.cs" />
+    <Compile Include="Controllers\ComponentePresupuestarioController.cs" />
     <Compile Include="Controllers\DesarraigoController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\CalificacionController.cs" />
@@ -951,6 +953,7 @@
     <Compile Include="ViewModels\BusquedaPagoFeriadoVM.cs" />
     <Compile Include="ViewModels\CandidatoPuestoVM.cs" />
     <Compile Include="ViewModels\CaracteristicasPuestoVM.cs" />
+    <Compile Include="ViewModels\ComponentePresupuestarioVM.cs" />
     <Compile Include="ViewModels\ContenidoPresupuestarioPuestoVM.cs" />
     <Compile Include="ViewModels\CursoResolucionVM.cs" />
     <Compile Include="ViewModels\DetalleContratacionVM.cs" />
@@ -2882,6 +2885,9 @@
     <Content Include="Views\Carrera\_SearchHistoricoCarreraResults.cshtml" />
     <Content Include="Views\Carrera\_SearchHistoricoCursosResults.cshtml" />
     <Content Include="Views\Carrera\_SearchHistoricoPuntosResults.cshtml" />
+    <Content Include="Views\ComponentePresupuestario\Create.cshtml" />
+    <Content Include="Views\ComponentePresupuestario\Index.cshtml" />
+    <Content Include="Views\ComponentePresupuestario\_FormularioDecreto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

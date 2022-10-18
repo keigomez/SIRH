@@ -14,17 +14,12 @@ namespace SIRH.Datos
     
     public partial class Decreto
     {
-        public Decreto()
-        {
-            this.DecretoComponentePresupuestario = new HashSet<DecretoComponentePresupuestario>();
-        }
-    
         public int PK_Decreto { get; set; }
         public string NumDecreto { get; set; }
         public string TituloDecreto { get; set; }
         public Nullable<System.DateTime> FecDecreto { get; set; }
         public string ObsDecreto { get; set; }
     
-        public virtual ICollection<DecretoComponentePresupuestario> DecretoComponentePresupuestario { get; set; }
+        public virtual DecretoComponentePresupuestario DecretoComponentePresupuestario { get; set; }
     }
 }

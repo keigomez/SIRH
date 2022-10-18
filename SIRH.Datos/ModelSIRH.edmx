@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SIRHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SIRHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errores durante la generación:
 advertencia 6013: La tabla o vista 'SIRH.dbo._AEscala' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
         <EntityType Name="_AEscala">
@@ -1448,7 +1448,10 @@ advertencia 6013: La tabla o vista 'SIRH.dbo._VACANTES_AB' no tiene definida una
           <Property Name="AnioPresupuesto" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="MtoComponentePresupuestario" Type="decimal" Precision="20" Scale="2" />
           <Property Name="FK_CatMovimientoPresupuesto" Type="int" />
-          <Property Name="Detalle" Type="varchar" MaxLength="250" />
+          <Property Name="ObsComponentePresupuestario" Type="varchar" MaxLength="250" />
+          <Property Name="TituloComponentePresupuestario" Type="varchar" MaxLength="50" />
+          <Property Name="NumComponentePresupuestario" Type="varchar" MaxLength="50" />
+          <Property Name="FecComponentePresupuestario" Type="datetime" />
         </EntityType>
         <EntityType Name="ComponenteSalarial">
           <Key>
@@ -1558,10 +1561,8 @@ advertencia 6002: La tabla o vista 'SIRH.dbo.DecretoComponentePresupuestario' no
         <EntityType Name="DecretoComponentePresupuestario">
           <Key>
             <PropertyRef Name="FK_Decreto" />
-            <PropertyRef Name="FK_ComponentePresupuestario" />
           </Key>
           <Property Name="FK_Decreto" Type="int" Nullable="false" />
-          <Property Name="FK_ComponentePresupuestario" Type="int" Nullable="false" />
           <Property Name="TipCambio" Type="int" />
         </EntityType>
         <EntityType Name="DeduccionEfectuada">
@@ -2693,7 +2694,6 @@ advertencia 6002: La tabla o vista 'SIRH.dbo.Mes' no tiene definida ninguna clav
             <PropertyRef Name="PK_ObjetoGasto" />
           </Key>
           <Property Name="PK_ObjetoGasto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FK_Partida" Type="int" />
           <Property Name="FK_SubPartida" Type="int" />
           <Property Name="CodObjetoGasto" Type="varchar" MaxLength="7" />
           <Property Name="DesObjetoGasto" Type="varchar" MaxLength="250" />
@@ -4707,21 +4707,9 @@ advertencia 6013: La tabla o vista 'SIRH.dbo.Rubros' no tiene definida una clave
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DecretoComponentePresupuestario_ComponentePresupuestario">
-          <End Role="ComponentePresupuestario" Type="Self.ComponentePresupuestario" Multiplicity="1" />
-          <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ComponentePresupuestario">
-              <PropertyRef Name="PK_ComponentePresupuestario" />
-            </Principal>
-            <Dependent Role="DecretoComponentePresupuestario">
-              <PropertyRef Name="FK_ComponentePresupuestario" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_DecretoComponentePresupuestario_Decreto">
           <End Role="Decreto" Type="Self.Decreto" Multiplicity="1" />
-          <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="*" />
+          <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Decreto">
               <PropertyRef Name="PK_Decreto" />
@@ -6171,18 +6159,6 @@ advertencia 6013: La tabla o vista 'SIRH.dbo.Rubros' no tiene definida una clave
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ObjetoGasto_Partida">
-          <End Role="Partida" Type="Self.Partida" Multiplicity="0..1" />
-          <End Role="ObjetoGasto" Type="Self.ObjetoGasto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Partida">
-              <PropertyRef Name="PK_Partida" />
-            </Principal>
-            <Dependent Role="ObjetoGasto">
-              <PropertyRef Name="FK_Partida" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ObjetoGasto_SubPartida">
           <End Role="SubPartida" Type="Self.SubPartida" Multiplicity="0..1" />
           <End Role="ObjetoGasto" Type="Self.ObjetoGasto" Multiplicity="*" />
@@ -7563,7 +7539,6 @@ FROM [dbo].[_RespaldoNombramiento20210303] AS [_RespaldoNombramiento20210303]</D
           <EntitySet Name="DecretoComponentePresupuestario" EntityType="Self.DecretoComponentePresupuestario" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [DecretoComponentePresupuestario].[FK_Decreto] AS [FK_Decreto], 
-[DecretoComponentePresupuestario].[FK_ComponentePresupuestario] AS [FK_ComponentePresupuestario], 
 [DecretoComponentePresupuestario].[TipCambio] AS [TipCambio]
 FROM [dbo].[DecretoComponentePresupuestario] AS [DecretoComponentePresupuestario]</DefiningQuery>
           </EntitySet>
@@ -8030,10 +8005,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
           <AssociationSet Name="FK_dbo_UbicacionAsueto_3" Association="Self.FK_dbo_UbicacionAsueto_3">
             <End Role="Canton" EntitySet="Canton" />
             <End Role="UbicacionAsueto" EntitySet="UbicacionAsueto" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DecretoComponentePresupuestario_ComponentePresupuestario" Association="Self.FK_DecretoComponentePresupuestario_ComponentePresupuestario">
-            <End Role="ComponentePresupuestario" EntitySet="ComponentePresupuestario" />
-            <End Role="DecretoComponentePresupuestario" EntitySet="DecretoComponentePresupuestario" />
           </AssociationSet>
           <AssociationSet Name="FK_DecretoComponentePresupuestario_Decreto" Association="Self.FK_DecretoComponentePresupuestario_Decreto">
             <End Role="Decreto" EntitySet="Decreto" />
@@ -8519,10 +8490,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <End Role="PeriodoCalificacion" EntitySet="PeriodoCalificacion" />
             <End Role="ObjetivoInstitucional" EntitySet="ObjetivoInstitucional" />
           </AssociationSet>
-          <AssociationSet Name="FK_ObjetoGasto_Partida" Association="Self.FK_ObjetoGasto_Partida">
-            <End Role="Partida" EntitySet="Partida" />
-            <End Role="ObjetoGasto" EntitySet="ObjetoGasto" />
-          </AssociationSet>
           <AssociationSet Name="FK_ObjetoGasto_SubPartida" Association="Self.FK_ObjetoGasto_SubPartida">
             <End Role="SubPartida" EntitySet="SubPartida" />
             <End Role="ObjetoGasto" EntitySet="ObjetoGasto" />
@@ -8740,8 +8707,7 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <End Role="MovimientoPuesto" EntitySet="MovimientoPuesto" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SIRHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -9636,11 +9602,13 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
           <Property Name="AnioPresupuesto" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MtoComponentePresupuestario" Type="Decimal" Precision="20" Scale="2" />
           <Property Name="FK_CatMovimientoPresupuesto" Type="Int32" />
-          <Property Name="Detalle" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TituloComponentePresupuestario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumComponentePresupuestario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FecComponentePresupuestario" Type="DateTime" Precision="3" />
           <NavigationProperty Name="CatMovimientoPresupuesto" Relationship="Self.FK_ComponentePresupuestario_CatMovimientoPresupuesto" FromRole="ComponentePresupuestario" ToRole="CatMovimientoPresupuesto" />
           <NavigationProperty Name="ObjetoGasto" Relationship="Self.FK_ComponentePresupuestario_ObjetoGasto" FromRole="ComponentePresupuestario" ToRole="ObjetoGasto" />
           <NavigationProperty Name="Programa" Relationship="Self.FK_ComponentePresupuestario_Programa" FromRole="ComponentePresupuestario" ToRole="Programa" />
-          <NavigationProperty Name="DecretoComponentePresupuestario" Relationship="Self.FK_DecretoComponentePresupuestario_ComponentePresupuestario" FromRole="ComponentePresupuestario" ToRole="DecretoComponentePresupuestario" />
+          <Property Name="ObsComponentePresupuestario" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="ComponenteSalarial">
           <Key>
@@ -11133,13 +11101,11 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <PropertyRef Name="PK_ObjetoGasto" />
           </Key>
           <Property Name="PK_ObjetoGasto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FK_Partida" Type="Int32" />
           <Property Name="FK_SubPartida" Type="Int32" />
           <Property Name="CodObjetoGasto" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
           <Property Name="DesObjetoGasto" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="ComponentePresupuestario" Relationship="Self.FK_ComponentePresupuestario_ObjetoGasto" FromRole="ObjetoGasto" ToRole="ComponentePresupuestario" />
           <NavigationProperty Name="ComponenteSalarial" Relationship="Self.FK_ComponenteSalarial_ObjetoGasto" FromRole="ObjetoGasto" ToRole="ComponenteSalarial" />
-          <NavigationProperty Name="Partida" Relationship="Self.FK_ObjetoGasto_Partida" FromRole="ObjetoGasto" ToRole="Partida" />
           <NavigationProperty Name="SubPartida" Relationship="Self.FK_ObjetoGasto_SubPartida" FromRole="ObjetoGasto" ToRole="SubPartida" />
         </EntityType>
         <EntityType Name="OcupacionReal">
@@ -11293,7 +11259,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
           <Property Name="PK_Partida" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CodPartida" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="DesPartida" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="ObjetoGasto" Relationship="Self.FK_ObjetoGasto_Partida" FromRole="Partida" ToRole="ObjetoGasto" />
           <NavigationProperty Name="SubPartida" Relationship="Self.FK_SubPartida_Partida" FromRole="Partida" ToRole="SubPartida" />
         </EntityType>
         <EntityType Name="PedimentoPuesto">
@@ -12421,12 +12386,9 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
         <EntityType Name="DecretoComponentePresupuestario">
           <Key>
             <PropertyRef Name="FK_Decreto" />
-            <PropertyRef Name="FK_ComponentePresupuestario" />
           </Key>
           <Property Name="FK_Decreto" Type="Int32" Nullable="false" />
-          <Property Name="FK_ComponentePresupuestario" Type="Int32" Nullable="false" />
           <Property Name="TipCambio" Type="Int32" />
-          <NavigationProperty Name="ComponentePresupuestario" Relationship="Self.FK_DecretoComponentePresupuestario_ComponentePresupuestario" FromRole="DecretoComponentePresupuestario" ToRole="ComponentePresupuestario" />
           <NavigationProperty Name="Decreto" Relationship="Self.FK_DecretoComponentePresupuestario_Decreto" FromRole="DecretoComponentePresupuestario" ToRole="Decreto" />
         </EntityType>
         <EntityType Name="ListaNombramientosActivos">
@@ -13418,18 +13380,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DecretoComponentePresupuestario_ComponentePresupuestario">
-          <End Role="ComponentePresupuestario" Type="Self.ComponentePresupuestario" Multiplicity="1" />
-          <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ComponentePresupuestario">
-              <PropertyRef Name="PK_ComponentePresupuestario" />
-            </Principal>
-            <Dependent Role="DecretoComponentePresupuestario">
-              <PropertyRef Name="FK_ComponentePresupuestario" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ComponenteSalarial_ObjetoGasto">
           <End Role="ObjetoGasto" Type="Self.ObjetoGasto" Multiplicity="0..1" />
           <End Role="ComponenteSalarial" Type="Self.ComponenteSalarial" Multiplicity="*" />
@@ -13612,7 +13562,7 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
         </Association>
         <Association Name="FK_DecretoComponentePresupuestario_Decreto">
           <End Role="Decreto" Type="Self.Decreto" Multiplicity="1" />
-          <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="*" />
+          <End Role="DecretoComponentePresupuestario" Type="Self.DecretoComponentePresupuestario" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Decreto">
               <PropertyRef Name="PK_Decreto" />
@@ -15494,18 +15444,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ObjetoGasto_Partida">
-          <End Role="Partida" Type="Self.Partida" Multiplicity="0..1" />
-          <End Role="ObjetoGasto" Type="Self.ObjetoGasto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Partida">
-              <PropertyRef Name="PK_Partida" />
-            </Principal>
-            <Dependent Role="ObjetoGasto">
-              <PropertyRef Name="FK_Partida" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ObjetoGasto_SubPartida">
           <End Role="SubPartida" Type="Self.SubPartida" Multiplicity="0..1" />
           <End Role="ObjetoGasto" Type="Self.ObjetoGasto" Multiplicity="*" />
@@ -16449,10 +16387,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <End Role="Programa" EntitySet="Programa" />
             <End Role="ComponentePresupuestario" EntitySet="ComponentePresupuestario" />
           </AssociationSet>
-          <AssociationSet Name="FK_DecretoComponentePresupuestario_ComponentePresupuestario" Association="Self.FK_DecretoComponentePresupuestario_ComponentePresupuestario">
-            <End Role="ComponentePresupuestario" EntitySet="ComponentePresupuestario" />
-            <End Role="DecretoComponentePresupuestario" EntitySet="DecretoComponentePresupuestario" />
-          </AssociationSet>
           <AssociationSet Name="FK_ComponenteSalarial_ObjetoGasto" Association="Self.FK_ComponenteSalarial_ObjetoGasto">
             <End Role="ObjetoGasto" EntitySet="ObjetoGasto" />
             <End Role="ComponenteSalarial" EntitySet="ComponenteSalarial" />
@@ -17141,10 +17075,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <End Role="PeriodoCalificacion" EntitySet="PeriodoCalificacion" />
             <End Role="ObjetivoInstitucional" EntitySet="ObjetivoInstitucional" />
           </AssociationSet>
-          <AssociationSet Name="FK_ObjetoGasto_Partida" Association="Self.FK_ObjetoGasto_Partida">
-            <End Role="Partida" EntitySet="Partida" />
-            <End Role="ObjetoGasto" EntitySet="ObjetoGasto" />
-          </AssociationSet>
           <AssociationSet Name="FK_ObjetoGasto_SubPartida" Association="Self.FK_ObjetoGasto_SubPartida">
             <End Role="SubPartida" EntitySet="SubPartida" />
             <End Role="ObjetoGasto" EntitySet="ObjetoGasto" />
@@ -17280,7 +17210,7 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
           <FunctionImport Name="REBAJOVACACIONES_FALTANTES" />
           <FunctionImport Name="REBAJOVACACIONES_PENDIENTES" />
           <FunctionImport Name="SeleccionarObjectID" ReturnType="Collection(Int32)">
-            <Parameter Name="entidad" Mode="In" Type="String" />
+          <Parameter Name="entidad" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -17329,13 +17259,13 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <Parameter Name="Annio" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="USP_GENERAR_LISTA_CALIFICACION_FUNCIONARIOS" ReturnType="Collection(Int32)">
-            <Parameter Name="Annio" Mode="In" Type="Int32" />
+          <Parameter Name="Annio" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="USP_GENERAR_LISTA_CALIFICACION_REGLA_TECNICA">
-            <Parameter Name="Periodo" Mode="In" Type="Int32" />
+          <Parameter Name="Periodo" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="USP_GENERAR_PLANILLA">
-            <Parameter Name="FechaPlanilla" Mode="In" Type="DateTime" />
+          <Parameter Name="FechaPlanilla" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="USP_GENERAR_PLANILLA_MENSUAL" />
           <FunctionImport Name="USP_INSERTAR_ACCION_PERSONAL" ReturnType="Collection(String)">
@@ -17372,14 +17302,14 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <Parameter Name="MtoOtros" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="USP_LISTAR_FUNCIONARIOS_CALIFICACION" ReturnType="Collection(SIRHModel.USP_LISTAR_FUNCIONARIOS_CALIFICACION_Result)">
-            <Parameter Name="IdPeriodo" Mode="In" Type="Int32" />
+          <Parameter Name="IdPeriodo" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="USP_LISTAR_FUNCIONARIOS_CALIFICACION_JEFATURA">
             <Parameter Name="IdPeriodo" Mode="In" Type="Int32" />
             <Parameter Name="Num_Cedula" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="USP_LISTAR_FUNCIONARIOS_JEFATURA" ReturnType="Collection(SIRHModel.USP_LISTAR_FUNCIONARIOS_JEFATURA_Result)">
-            <Parameter Name="Num_Cedula" Mode="In" Type="String" />
+          <Parameter Name="Num_Cedula" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="USP_LISTAR_NOMBRAMIENTOS_ACTIVOS" />
           <FunctionImport Name="USP_OBTENER_ACCION_PERSONAL_PRORROGA" ReturnType="Collection(SIRHModel.USP_OBTENER_ACCION_PERSONAL_PRORROGA_Result)">
@@ -17387,7 +17317,7 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <Parameter Name="Num_Cedula" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="USP_OBTENER_DATOS_CALIFICACION" ReturnType="Collection(SIRHModel.USP_OBTENER_DATOS_CALIFICACION_Result)">
-            <Parameter Name="Periodo" Mode="In" Type="Int32" />
+          <Parameter Name="Periodo" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="USP_OBTENER_DIAS_FECHAS" ReturnType="Collection(DateTime)">
             <Parameter Name="fechaDesde" Mode="In" Type="DateTime" />
@@ -17398,10 +17328,10 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <Parameter Name="idPeriodo" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="USP_OBTENER_RESULTADOS_CALIFICACION" ReturnType="Collection(SIRHModel.USP_OBTENER_RESULTADOS_CALIFICACION_Result)">
-            <Parameter Name="Periodo" Mode="In" Type="Int32" />
+          <Parameter Name="Periodo" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="USP_VALIDAR_FECHA_RIGE" ReturnType="Collection(DateTime)">
-            <Parameter Name="FECHARIGE" Mode="In" Type="String" />
+          <Parameter Name="FECHARIGE" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -18359,13 +18289,16 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
           <EntitySetMapping Name="ComponentePresupuestario">
             <EntityTypeMapping TypeName="SIRHModel.ComponentePresupuestario">
               <MappingFragment StoreEntitySet="ComponentePresupuestario">
+                <ScalarProperty Name="ObsComponentePresupuestario" ColumnName="ObsComponentePresupuestario" />
                 <ScalarProperty Name="PK_ComponentePresupuestario" ColumnName="PK_ComponentePresupuestario" />
                 <ScalarProperty Name="FK_ObjetoGasto" ColumnName="FK_ObjetoGasto" />
                 <ScalarProperty Name="FK_Programa" ColumnName="FK_Programa" />
                 <ScalarProperty Name="AnioPresupuesto" ColumnName="AnioPresupuesto" />
                 <ScalarProperty Name="MtoComponentePresupuestario" ColumnName="MtoComponentePresupuestario" />
                 <ScalarProperty Name="FK_CatMovimientoPresupuesto" ColumnName="FK_CatMovimientoPresupuesto" />
-                <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+                <ScalarProperty Name="TituloComponentePresupuestario" ColumnName="TituloComponentePresupuestario" />
+                <ScalarProperty Name="NumComponentePresupuestario" ColumnName="NumComponentePresupuestario" />
+                <ScalarProperty Name="FecComponentePresupuestario" ColumnName="FecComponentePresupuestario" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -19675,7 +19608,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <EntityTypeMapping TypeName="SIRHModel.ObjetoGasto">
               <MappingFragment StoreEntitySet="ObjetoGasto">
                 <ScalarProperty Name="PK_ObjetoGasto" ColumnName="PK_ObjetoGasto" />
-                <ScalarProperty Name="FK_Partida" ColumnName="FK_Partida" />
                 <ScalarProperty Name="FK_SubPartida" ColumnName="FK_SubPartida" />
                 <ScalarProperty Name="CodObjetoGasto" ColumnName="CodObjetoGasto" />
                 <ScalarProperty Name="DesObjetoGasto" ColumnName="DesObjetoGasto" />
@@ -20846,7 +20778,6 @@ FROM [dbo].[PLANILLA_SPPP] AS [PLANILLA_SPPP]</DefiningQuery>
             <EntityTypeMapping TypeName="SIRHModel.DecretoComponentePresupuestario">
               <MappingFragment StoreEntitySet="DecretoComponentePresupuestario">
                 <ScalarProperty Name="FK_Decreto" ColumnName="FK_Decreto" />
-                <ScalarProperty Name="FK_ComponentePresupuestario" ColumnName="FK_ComponentePresupuestario" />
                 <ScalarProperty Name="TipCambio" ColumnName="TipCambio" />
               </MappingFragment>
             </EntityTypeMapping>

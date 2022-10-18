@@ -4,28 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4508e7e182db4821a2b4eba5d179e807" Name="Diagram1">
-        <EntityTypeShape EntityType="SIRHModel.C_AUX_DetallePagoGasto" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_AUX_DetallePagoViatico" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_EMU_AccionPersonal" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_EMU_Calificacion" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_EMU_CarreraProfesional" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_EMU_Cursos" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_EMU_HistoricoPlanilla_oldie" Width="1.5" PointX="13.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_EMU_Puntos" Width="1.5" PointX="7.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_EMU_Vacaciones_Movimiento" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_EMU_Vacaciones_Saldo" Width="1.5" PointX="15.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_ViaticoCorrido" Width="1.5" PointX="15.75" PointY="9.75" IsExpanded="true" />
+      <Diagram DiagramId="b7e394a28f0842219607252a3685bafe" Name="Diagram1">
+        <EntityTypeShape EntityType="SIRHModel.C_AUX_DetallePagoGasto" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_AUX_DetallePagoViatico" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_EMU_AccionPersonal" Width="1.5" PointX="7.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_EMU_Calificacion" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_EMU_CarreraProfesional" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_EMU_Cursos" Width="1.5" PointX="9.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_EMU_HistoricoPlanilla_oldie" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_EMU_Puntos" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_EMU_Vacaciones_Movimiento" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_EMU_Vacaciones_Saldo" Width="1.5" PointX="16.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_ViaticoCorrido" Width="1.5" PointX="16.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.AccionPersonal" Width="1.5" PointX="16.5" PointY="105.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ActividadFuncionario" Width="1.5" PointX="5.25" PointY="108.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ActividadMeta" Width="1.5" PointX="13.5" PointY="129.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ActividadResultadoCargo" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.AddendumPrestamoPuesto" Width="1.5" PointX="25.5" PointY="82.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.AddendumPrestamoPuesto" Width="1.5" PointX="27.5" PointY="78.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.BitacoraIncidencia" Width="1.5" PointX="5.25" PointY="114.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.BitacoraUsuario" Width="1.5" PointX="8.25" PointY="105.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.BoletaPrestamo" Width="1.5" PointX="7.5" PointY="139.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.BorradorAccionPersonal" Width="1.5" PointX="20.25" PointY="151.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.BotAccionIncidencia" Width="1.5" PointX="11.25" PointY="68.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.BotAccionIncidencia" Width="1.5" PointX="11.25" PointY="71.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Calificacion" Width="1.5" PointX="17.25" PointY="83.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CalificacionCapacitacion" Width="1.5" PointX="11.25" PointY="129.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CalificacionEncargado" Width="1.5" PointX="8.25" PointY="117" IsExpanded="true" />
@@ -35,39 +35,39 @@
         <EntityTypeShape EntityType="SIRHModel.CalificacionReglaTecnica" Width="1.5" PointX="19.5" PointY="136.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CambioPorAccionPersonal" Width="1.5" PointX="24.75" PointY="112.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Canton" Width="1.5" PointX="18" PointY="89.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.CaracteristicasPuesto" Width="1.5" PointX="14.25" PointY="80.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.CaracteristicasPuesto" Width="1.5" PointX="23.25" PointY="84.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Cargo" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CartasPresentacion" Width="1.5" PointX="16.5" PointY="118" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.CatalogoDeduccion" Width="1.5" PointX="16.5" PointY="153.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.CatalogoDeduccion" Width="1.5" PointX="16.5" PointY="145.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatalogoDia" Width="1.5" PointX="10.5" PointY="194.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatalogoIncidencia" Width="1.5" PointX="9" PointY="101.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatalogoPregunta" Width="1.5" PointX="28.5" PointY="124.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatalogoRemuneracion" Width="1.5" PointX="7.5" PointY="185.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatAnioAccionPersonal" Width="1.5" PointX="14.25" PointY="99.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.CatAnioBoletaPrestamo" Width="1.5" PointX="5.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.CatCampo" Width="1.5" PointX="15.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.CatAnioBoletaPrestamo" Width="1.5" PointX="9.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.CatCampo" Width="1.5" PointX="11.75" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatDiaViaticoGasto" Width="1.5" PointX="10.5" PointY="198.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatEstadoCivil" Width="1.5" PointX="9" PointY="135.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatMetaEstado" Width="1.5" PointX="12" PointY="103.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatMetaPrioridad" Width="1.5" PointX="12" PointY="95.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.CatMovimientoPresupuesto" Width="1.5" PointX="29.25" PointY="121.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.CatOrdenMovimiento" Width="1.5" PointX="9.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.CatMovimientoPresupuesto" Width="1.5" PointX="23.25" PointY="68.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.CatOrdenMovimiento" Width="1.5" PointX="16.75" PointY="14.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatPermiso" Width="1.5" PointX="8.25" PointY="128.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CatPermisoEvidencia" Width="1.5" PointX="5.25" PointY="118.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Caucion" Width="1.5" PointX="22.5" PointY="108.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.Clase" Width="1.5" PointX="23.25" PointY="64.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.Clase" Width="1.5" PointX="23.25" PointY="143.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CompetenciaGrupoOcupacional" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CompetenciaTransversalCargo" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.ComponentePresupuestario" Width="1.5" PointX="31.5" PointY="121.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.ComponenteSalarial" Width="1.5" PointX="22.5" PointY="144.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.ComponentePresupuestario" Width="1.5" PointX="25.5" PointY="85.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.ComponenteSalarial" Width="1.5" PointX="22.5" PointY="79.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ComportamientoGrupoOcupacional" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ComportamientoTransversal" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.ContenidoPresupuestario" Width="1.5" PointX="23.25" PointY="67" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.ContenidoPresupuestario" Width="1.5" PointX="23.25" PointY="146" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ContratoArrendamiento" Width="1.5" PointX="32.75" PointY="101.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CuentaBancaria" Width="1.5" PointX="7.5" PointY="124.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CursoCapacitacion" Width="1.5" PointX="7.5" PointY="148.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.CursoGrado" Width="1.5" PointX="10.5" PointY="148.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.Decreto" Width="1.5" PointX="31.5" PointY="125.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.Decreto" Width="1.5" PointX="5.75" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.DeduccionEfectuada" Width="1.5" PointX="9.75" PointY="189.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.DeduccionTemporal" Width="1.5" PointX="19.5" PointY="102" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Departamento" Width="1.5" PointX="7.5" PointY="83.25" IsExpanded="true" />
@@ -98,8 +98,8 @@
         <EntityTypeShape EntityType="SIRHModel.DetallePrestacion" Width="1.5" PointX="18.75" PointY="96.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.DetallePrestacionAfiliacion" Width="1.5" PointX="18.75" PointY="93.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.DetallePrestacionCuadro" Width="1.5" PointX="21.75" PointY="94.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.DetallePuesto" Width="1.5" PointX="25.5" PointY="70.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.DetallePuestoRubro" Width="1.5" PointX="33.75" PointY="113.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.DetallePuesto" Width="1.5" PointX="25.5" PointY="149.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.DetallePuestoRubro" Width="1.5" PointX="29.75" PointY="121.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.DetallePuntosAdicional" Width="1.5" PointX="7.5" PointY="157" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.DetalleTiempoExtra" Width="1.5" PointX="24" PointY="129.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.DiaPagado" Width="1.5" PointX="12.75" PointY="189.5" IsExpanded="true" />
@@ -108,19 +108,19 @@
         <EntityTypeShape EntityType="SIRHModel.Distrito" Width="1.5" PointX="20.25" PointY="89.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Division" Width="1.5" PointX="7.5" PointY="88.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.EjecutorActividad" Width="1.5" PointX="11.25" PointY="114" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.EntidadAdscrita" Width="1.5" PointX="21" PointY="73" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.EntidadAdscrita" Width="1.5" PointX="23" PointY="77" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.EntidadEducativa" Width="1.5" PointX="5.25" PointY="146" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.EntidadFinanciera" Width="1.5" PointX="5.25" PointY="99.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.EntidadGubernamental" Width="1.5" PointX="21" PointY="66.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.EntidadMedica" Width="1.5" PointX="21" PointY="149.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.EntidadSeguros" Width="1.5" PointX="20.25" PointY="80.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.EscalaSalarial" Width="1.5" PointX="23.25" PointY="69.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.Especialidad" Width="1.5" PointX="23.25" PointY="72.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.EntidadGubernamental" Width="1.5" PointX="23" PointY="70.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.EntidadMedica" Width="1.5" PointX="21" PointY="74.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.EntidadSeguros" Width="1.5" PointX="20.25" PointY="77.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.EscalaSalarial" Width="1.5" PointX="23.25" PointY="148.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.Especialidad" Width="1.5" PointX="23.25" PointY="151.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.EstadoBorrador" Width="1.5" PointX="14.25" PointY="96.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.EstadoDesarraigo" Width="1.5" PointX="20.25" PointY="86.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.EstadoFuncionario" Width="1.5" PointX="0.75" PointY="117.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.EstadoGastoTransporte" Width="1.5" PointX="17.25" PointY="150.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.EstadoMovimientoPuesto" Width="1.5" PointX="22" PointY="160.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.EstadoGastoTransporte" Width="1.5" PointX="17.25" PointY="142.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.EstadoMovimientoPuesto" Width="1.5" PointX="22" PointY="172.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.EstadoNombramiento" Width="1.5" PointX="12" PointY="99" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.EstadoOrdenMovimiento" Width="1.5" PointX="12" PointY="136.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.EstadoPedimento" Width="1.5" PointX="12" PointY="163.875" IsExpanded="true" />
@@ -133,7 +133,7 @@
         <EntityTypeShape EntityType="SIRHModel.EvidenciaGrupoOcupacional" Width="1.5" PointX="7.5" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ExpedienteFuncionario" Width="1.5" PointX="5.25" PointY="139.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ExperienciaProfesional" Width="1.5" PointX="7.5" PointY="160.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.Factor" Width="1.5" PointX="12" PointY="75.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.Factor" Width="1.5" PointX="21" PointY="67.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.FactorClasificacionCargo" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.FacturaDesarraigo" Width="1.5" PointX="32.75" PointY="105.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.FamiliaPuestos" Width="1.5" PointX="9.75" PointY="80.625" IsExpanded="true" />
@@ -152,10 +152,10 @@
         <EntityTypeShape EntityType="SIRHModel.MetaObjetivoCalificacion" Width="1.5" PointX="12" PointY="153.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.MetaObjetivoInstitucional" Width="1.5" PointX="11.25" PointY="124.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Modalidad" Width="1.5" PointX="5.25" PointY="153" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.MontoCaucion" Width="1.5" PointX="20.25" PointY="75.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.MontoCaucion" Width="1.5" PointX="20.25" PointY="143.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.MotivoMovimiento" Width="1.5" PointX="12" PointY="139.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.MotivoPedimento" Width="1.5" PointX="9.75" PointY="159.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.MovimientoBorradorAccionPersonal" Width="1.5" PointX="22.5" PointY="167.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.MovimientoBorradorAccionPersonal" Width="1.5" PointX="22.5" PointY="175.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.MovimientoGastoTransporte" Width="1.5" PointX="21.75" PointY="135.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.MovimientoPuesto" Width="1.5" PointX="24.25" PointY="124.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.MovimientoViaticoCorrido" Width="1.5" PointX="27.75" PointY="99.125" IsExpanded="true" />
@@ -163,94 +163,94 @@
         <EntityTypeShape EntityType="SIRHModel.NotificacionUsuario" Width="1.5" PointX="8.25" PointY="164.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ObjetivoCalificacion" Width="1.5" PointX="9.75" PointY="153.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ObjetivoInstitucional" Width="1.5" PointX="9" PointY="132.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.ObjetoGasto" Width="1.5" PointX="20.25" PointY="144.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.OcupacionReal" Width="1.5" PointX="23.25" PointY="75.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.ObjetoGasto" Width="1.5" PointX="20.25" PointY="79.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.OcupacionReal" Width="1.5" PointX="23.25" PointY="154.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.OrdenMovimiento" Width="1.5" PointX="14.25" PointY="122.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.OrdenMovimientoDeclaracion" Width="1.5" PointX="16.5" PointY="133.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.PagoExtraordinario" Width="1.5" PointX="5.25" PointY="189.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.PagoFeriado" Width="1.5" PointX="7.5" PointY="188.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.PagoGastoTransporte" Width="1.5" PointX="21.75" PointY="139" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.PagoPrestacion" Width="1.5" PointX="11.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.PagoPrestacion" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.PagoViaticoCorrido" Width="1.5" PointX="27.75" PointY="102.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.PagoViaticoRetroactivo" Width="1.5" PointX="30" PointY="106.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.Partida" Width="1.5" PointX="18" PointY="143.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.Partida" Width="1.5" PointX="15.75" PointY="80.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.PedimentoPuesto" Width="1.5" PointX="12" PointY="159" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Perfil" Width="1.5" PointX="6.75" PointY="102" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.PerfilAcceso" Width="1.5" PointX="10.5" PointY="106" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.PeriodoCalificacion" Width="1.5" PointX="17.25" PointY="137.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.PeriodoEscalaSalarial" Width="1.5" PointX="21" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.PeriodoEscalaSalarial" Width="1.5" PointX="21" PointY="148.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.PeriodoVacaciones" Width="1.5" PointX="16.5" PointY="163.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.PrestacionLegal" Width="1.5" PointX="16.5" PointY="101.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.PrestamoPuesto" Width="1.5" PointX="23.25" PointY="83.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.PrestamoPuesto" Width="1.5" PointX="25.25" PointY="79.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Presupuesto" Width="1.5" PointX="7.5" PointY="91.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Programa" Width="1.5" PointX="5.25" PointY="91.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Provincia" Width="1.5" PointX="15.75" PointY="90" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Puesto" Width="1.5" PointX="12" PointY="85.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.RegistroIncapacidad" Width="1.5" PointX="25.5" PointY="108.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.RegistroPrestacionReal" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.RegistroPrestacionReal" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.RegistroTiempoExtra" Width="1.5" PointX="21.75" PointY="128.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.RegistroVacaciones" Width="1.5" PointX="18.75" PointY="163.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ReintegroVacaciones" Width="1.5" PointX="21" PointY="163.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.RelPuestoUbicacion" Width="1.5" PointX="17.25" PointY="80.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.RelPuestoUbicacion" Width="1.5" PointX="14.25" PointY="77.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.RemuneracionEfectuadaPF" Width="1.5" PointX="9.75" PointY="186.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ReporteEstadistico" Width="1.5" PointX="8.25" PointY="168.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.RequerimientoEspecificoCargo" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.Rescision" Width="1.5" PointX="25.5" PointY="85.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.Rescision" Width="1.5" PointX="27.5" PointY="81.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ResolucionPedimento" Width="1.5" PointX="17.25" PointY="159.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ResultadoCargo" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Seccion" Width="1.5" PointX="7.5" PointY="95.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.SubEspecialidad" Width="1.5" PointX="23.25" PointY="78" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.SubPartida" Width="1.5" PointX="18" PointY="146.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.SubEspecialidad" Width="1.5" PointX="23.25" PointY="157" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.SubPartida" Width="1.5" PointX="18" PointY="80" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TareasPuesto" Width="1.5" PointX="14.25" PointY="83.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.TEMP_EnviarCorreo" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.TEMP_EnviarCorreo" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TipoAccionPersonal" Width="1.5" PointX="14.25" PointY="93.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.TipoCambioPorAccionPersonal" Width="1.5" PointX="22.5" PointY="88.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.TipoCambioPorAccionPersonal" Width="1.5" PointX="22.5" PointY="88.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TipoContacto" Width="1.5" PointX="6" PointY="106.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.TipoDeduccion" Width="1.5" PointX="14.25" PointY="154.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.TipoDeduccion" Width="1.5" PointX="14.25" PointY="146.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TipoDeduccionTemporal" Width="1.5" PointX="17.25" PointY="86.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.TipoDetalleGastoTransporte" Width="1.5" PointX="21.75" PointY="155.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.TipoDetalleGastoTransporte" Width="1.5" PointX="21.75" PointY="167.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TipoDetallePagoViatico" Width="1.5" PointX="27.75" PointY="96.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TipoDia" Width="1.5" PointX="8.25" PointY="194.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.TipoExtra" Width="1.5" PointX="21.75" PointY="158.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.TipoIncapacidad" Width="1.5" PointX="23.25" PointY="149.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.TipoExtra" Width="1.5" PointX="21.75" PointY="170.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.TipoIncapacidad" Width="1.5" PointX="23.25" PointY="74.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TipoIndicadorMeta" Width="1.5" PointX="12" PointY="134.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TipoJornada" Width="1.5" PointX="3" PointY="122.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TipoPoliticaPublica" Width="1.5" PointX="9" PointY="99.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TipoPrestacion" Width="1.5" PointX="14.25" PointY="102.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.TipoPrestacionCuadro" Width="1.5" PointX="19.5" PointY="83.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.TipoPuesto" Width="1.5" PointX="23.25" PointY="80.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.TipoResolucionPedimento" Width="1.5" PointX="15" PointY="167.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.TipoUbicacion" Width="1.5" PointX="12.75" PointY="71.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.TituloFactor" Width="1.5" PointX="9.75" PointY="75.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.TipoPuesto" Width="1.5" PointX="23.25" PointY="159.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.TipoResolucionPedimento" Width="1.5" PointX="15" PointY="156.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.TipoUbicacion" Width="1.5" PointX="9.75" PointY="74.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.TituloFactor" Width="1.5" PointX="18.75" PointY="67.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Tomo" Width="1.5" PointX="7.5" PointY="143.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.UbicacionAdministrativa" Width="1.5" PointX="9.75" PointY="88.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.UbicacionAsueto" Width="1.5" PointX="25.25" PointY="143.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.UbicacionPuesto" Width="1.5" PointX="15" PointY="70.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.UbicacionAsueto" Width="1.5" PointX="26.25" PointY="142.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.UbicacionPuesto" Width="1.5" PointX="12" PointY="73.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.Usuario" Width="1.5" PointX="6" PointY="128.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ViaticoCorrido" Width="1.5" PointX="25.5" PointY="101" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ViaticoCorridoReintegroDias" Width="1.5" PointX="27.75" PointY="106.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_Componentes" Width="1.5" PointX="17.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_EMU_EXFUNCIONARIOS" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_EMU_HistoricoPlanilla" Width="1.5" PointX="17.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_funcionariosactivos" Width="1.5" PointX="13.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_funcionariosguardia" Width="1.5" PointX="15.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_funcionariospendientes" Width="1.5" PointX="17.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_InicioPlanilla" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_Nombramiento_Respaldo" Width="1.5" PointX="19.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_PeriodosActualizar" Width="1.5" PointX="19.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_PeriodosBorrar" Width="1.5" PointX="19.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_PeriodosRebaja" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_Planilla_Anterior" Width="1.5" PointX="9.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_planillacargar" Width="1.5" PointX="11.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_RebajoPendientes" Width="1.5" PointX="13.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_RespaldoNombramiento" Width="1.5" PointX="15.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_RespaldoNombramiento20210225" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.C_RespaldoNombramiento20210303" Width="1.5" PointX="21.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.DecretoComponentePresupuestario" Width="1.5" PointX="33.75" PointY="121.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_Componentes" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_EMU_EXFUNCIONARIOS" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_EMU_HistoricoPlanilla" Width="1.5" PointX="18.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_funcionariosactivos" Width="1.5" PointX="9.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_funcionariosguardia" Width="1.5" PointX="11.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_funcionariospendientes" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_InicioPlanilla" Width="1.5" PointX="20.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_Nombramiento_Respaldo" Width="1.5" PointX="4.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_PeriodosActualizar" Width="1.5" PointX="6.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_PeriodosBorrar" Width="1.5" PointX="20.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_PeriodosRebaja" Width="1.5" PointX="20.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_Planilla_Anterior" Width="1.5" PointX="0.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_planillacargar" Width="1.5" PointX="8.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_RebajoPendientes" Width="1.5" PointX="10.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_RespaldoNombramiento" Width="1.5" PointX="20.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_RespaldoNombramiento20210225" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.C_RespaldoNombramiento20210303" Width="1.5" PointX="22.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.DecretoComponentePresupuestario" Width="1.5" PointX="8" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SIRHModel.ListaNombramientosActivos" Width="1.5" PointX="16.5" PointY="112.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.Mes" Width="1.5" PointX="21.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIRHModel.PLANILLA_SPPP" Width="1.5" PointX="21.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.Mes" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRHModel.PLANILLA_SPPP" Width="1.5" PointX="22.75" PointY="11.75" IsExpanded="true" />
         <AssociationConnector Association="SIRHModel.FK_AccionPersonal_CatAnioAccionPersonal" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_AccionPersonal_EstadoBorrador" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_AccionPersonal_Nombramiento" ManuallyRouted="false" />
@@ -329,7 +329,6 @@
         <AssociationConnector Association="SIRHModel.FK_ComportamientoTransversal_CompetenciaTransversalCargo" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_ComponentePresupuestario_ObjetoGasto" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_ComponentePresupuestario_Programa" ManuallyRouted="false" />
-        <AssociationConnector Association="SIRHModel.FK_DecretoComponentePresupuestario_ComponentePresupuestario" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_ComponenteSalarial_ObjetoGasto" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_DetalleDesgloseSalarial_ComponenteSalarial" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_DetallePuestoRubro_ComponenteSalarial" ManuallyRouted="false" />
@@ -502,7 +501,6 @@
         <AssociationConnector Association="SIRHModel.FK_ObjetivoCalificacion_PeriodoCalificacion" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_ObjetivoCalificacion_Seccion" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_ObjetivoInstitucional_PeriodoCalificacion" ManuallyRouted="false" />
-        <AssociationConnector Association="SIRHModel.FK_ObjetoGasto_Partida" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_ObjetoGasto_SubPartida" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_OrdenMovimiento_PedimentoPuesto" ManuallyRouted="false" />
         <AssociationConnector Association="SIRHModel.FK_OrdenMovimientoDeclaracion_OrdenMovimiento" ManuallyRouted="false" />

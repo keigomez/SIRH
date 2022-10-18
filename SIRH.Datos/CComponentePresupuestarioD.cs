@@ -27,6 +27,67 @@ namespace SIRH.Datos
 
         #region Metodos
 
+        //__________________________________________DECRETOS________________________________________________________________________
+
+        public CRespuestaDTO AgregarDecretoComponentePresupuestario(ComponentePresupuestario registro)
+        {
+            bool valorInicial = true;
+            CRespuestaDTO respuesta;
+            try
+            {
+                
+                    var resultado = entidadBase.ComponentePresupuestario.Include("Programa")
+                                            .Include("CatMovimientoPresupuesto")
+                                            .Include("ObjetoGasto")
+                                            .Where(F => F.AnioPresupuesto == registro.AnioPresupuesto
+                                            && F.ObjetoGasto.PK_ObjetoGasto == registro.ObjetoGasto.PK_ObjetoGasto && F.Programa.PK_Programa == registro.Programa.PK_Programa)
+                                            .ToList();
+
+                    if (resultado.Count() >= 1)
+                    {
+                        valorInicial = true;
+                    }
+                    else
+                    {
+                        valorInicial = false;
+                    }
+                
+
+
+                if (valorInicial == true)
+                {
+                    entidadBase.ComponentePresupuestario.Add(registro);
+                    entidadBase.SaveChanges();
+
+                    respuesta = new CRespuestaDTO
+                    {
+                        Codigo = 1,
+                        Contenido = registro.PK_ComponentePresupuestario
+                    };
+                }
+                else
+                {
+                    respuesta = new CRespuestaDTO
+                    {
+                        Codigo = -1,
+                        Contenido = "No existe un registro del presupuesto inicial para el año, programa y objeto de gasto especificados"
+                    };
+                }
+            }
+            catch (Exception error)
+            {
+                respuesta = new CRespuestaDTO
+                {
+                    Codigo = -1,
+                    Contenido = new CErrorDTO { Mensaje = error.Message }
+                };
+            }
+            return respuesta;
+        }
+
+
+        //__________________________________________DECRETOS________________________________________________________________________
+
         public CRespuestaDTO GuardarComponentePresupuestario(ComponentePresupuestario registro)
         {
             bool valorInicial = true;
@@ -38,7 +99,7 @@ namespace SIRH.Datos
                     var resultado = entidadBase.ComponentePresupuestario.Include("Programa")
                                             .Include("CatMovimientoPresupuesto")
                                             .Include("ObjetoGasto")
-                                            .Where(F => F.AnioPresupuesto == registro.AnioPresupuesto && F.CatMovimientoPresupuesto.PK_CatMovimientoPresupuesto == 1
+                                            .Where(F => F.AnioPresupuesto == registro.AnioPresupuesto && F.CatMovimientoPresupuesto.PK_CatMovimientoPresupuesto == 1 
                                             && F.ObjetoGasto.PK_ObjetoGasto == registro.ObjetoGasto.PK_ObjetoGasto && F.Programa.PK_Programa == registro.Programa.PK_Programa)
                                             .ToList();
 
@@ -83,6 +144,8 @@ namespace SIRH.Datos
             }
             return respuesta;
         }
+
+        
 
 
         public CRespuestaDTO ObtenerMovimientoPresupuesto(int idMovimiento)
