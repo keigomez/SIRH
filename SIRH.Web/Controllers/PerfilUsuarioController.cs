@@ -400,7 +400,8 @@ namespace SIRH.Web.Controllers
                     return "Reportes,PerfilUsuario,Caucion,Desarraigo,PagoFeriado,MarcasAsistencia,"
                             + "BorradorAccionPersonal,Carrera,Vacantes,Calificacion,AccionPersonal,"
                             + "RegistroIncapacidad,Planilla,ViaticoCorrido,RegistroTiempoExtra,"
-                            + "Vacaciones,Archivo,ManualCargos";
+                            + "Vacaciones,Archivo,ManualCargos,"
+                            + "ComponentePresupuestario";
                 case 2:
                     return "Reportes";
                 case 3:
