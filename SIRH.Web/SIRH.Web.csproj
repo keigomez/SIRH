@@ -2888,6 +2888,7 @@
     <Content Include="Views\ComponentePresupuestario\Create.cshtml" />
     <Content Include="Views\ComponentePresupuestario\Index.cshtml" />
     <Content Include="Views\ComponentePresupuestario\_FormularioDecreto.cshtml" />
+    <Content Include="Views\Shared\ComponentePresupuestario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
